@@ -1,0 +1,51 @@
+$bg-dark-mode: rgb(24, 22, 22);
+$bg-light-mode: rgb(236, 230, 230);
+$grey-dark-mode: rgba(66, 66, 66, 0.712);
+$white-text: rgb(236, 230, 230);
+$primary: rgb(236, 230, 230);
+
+.preload {
+  transition: none !important;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.5s ease;
+}
+
+body.dark-mode {
+  background-color: $bg-dark-mode;
+  transition: background-color 0.5s ease;
+
+  a {
+    color: $primary;
+  }
+  .icon-button {
+    color: rgb(236, 230, 230);
+  }
+  .category-container {
+    border-color: rgb(236, 230, 230);
+    transition: border-color 0.5s ease-in-out;
+  }
+
+  h1 {
+    color: $primary;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
