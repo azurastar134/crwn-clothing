@@ -32,9 +32,10 @@ const ThemeChanger = () => {
           },
         }}
         className="icon-button"
-        style={{ marginTop: "16px", transition: "ease-in-out 0.5s" }}
+        style={{ marginTop: "16px" }}
         onClick={() => {
           setThemeState(!themeState);
+          document.body.classList.add("dark-light-toggle-transition");
         }}
       >
         {themeState ? <Brightness7 /> : <Brightness4 />}
