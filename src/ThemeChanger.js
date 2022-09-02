@@ -28,7 +28,7 @@ const ThemeChanger = () => {
         sx={{
           "&:hover": {
             backgroundColor: "rgb(255, 0, 0, 0.2)",
-            transition: "all 0.5s ease-in",
+            transition: "all 0.3s ease-in",
           },
         }}
         className="icon-button"

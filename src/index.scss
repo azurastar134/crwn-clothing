@@ -19,6 +19,22 @@ body.dark-mode {
     color: $primary;
   }
 
+  h1 {
+    color: $primary;
+  }
+
+  h2 {
+    color: $primary;
+  }
+
+  label {
+    color: $primary;
+  }
+
+  span {
+    color: $primary;
+  }
+
   .icon-button {
     color: rgb(236, 230, 230);
   }
@@ -27,8 +43,42 @@ body.dark-mode {
     border-color: rgb(236, 230, 230);
   }
 
-  h1 {
-    color: $primary;
+  .form-input {
+    border-bottom: 1px solid $primary;
+    background-color: $bg-dark-mode;
+  }
+
+  .button-container {
+    background-color: $primary;
+    color: $bg-dark-mode;
+
+    &:hover {
+      background-color: $bg-dark-mode;
+      color: $primary;
+      border: 1px solid $primary;
+    }
+
+    &.google-sign-in {
+      background-color: #4285f4;
+      color: white;
+
+      &:hover {
+        background-color: #357ae8;
+        border: none;
+      }
+    }
+
+    &.inverted {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+
+      &:hover {
+        background-color: black;
+        color: white;
+        border: none;
+      }
+    }
   }
 }
 
