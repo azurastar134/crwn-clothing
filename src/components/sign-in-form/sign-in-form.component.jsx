@@ -29,8 +29,7 @@ const SignInForm = () => {
   };
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   // handle the sumbit to the form
@@ -39,11 +38,11 @@ const SignInForm = () => {
 
     // try catch block
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(response);
+
       resetFormField();
     } catch (err) {
       switch (err.code) {
