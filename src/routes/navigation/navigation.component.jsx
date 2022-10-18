@@ -6,12 +6,15 @@ import "./navigation.styles.scss";
 import ThemeChanger from "../../ThemeChanger";
 
 import CartIcon from "../../components/card-icon/card-icon.component";
+import CartDropDown from "../../components/cart-dropdown/cart-dropdown.component";
 import { UserContext } from "../../context/user.context";
+import { CartContext } from "../../context/cart.context";
 
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
   console.log(currentUser);
 
   return (
@@ -36,6 +39,7 @@ const Navigation = () => {
           )}
           <CartIcon />
         </div>
+        {isCartOpen && <CartDropDown />}
       </div>
       <Outlet />
     </Fragment>

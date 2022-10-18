@@ -24,6 +24,11 @@
       margin-top: 15px;
       padding: 10px 15px;
       cursor: pointer;
+      transition: ease-out 0.3s;
+      &:hover {
+        transition: ease-in 0.3s;
+        color: rgba(196, 33, 33, 0.647);
+      }
     }
   }
 }

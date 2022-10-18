@@ -6,15 +6,16 @@ body {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 20px 15px;
+  padding: 15px 15px;
 }
+
 body::-webkit-scrollbar {
   background-color: transparent;
   width: 12px;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: $primary;
+  background-color: rgb(204, 191, 191);
   -webkit-box-shadow: inset 0 0 3px rgb(138, 134, 134);
   border-radius: 10px;
 }
@@ -53,6 +54,10 @@ body.dark-mode {
   }
 
   span {
+    color: $primary;
+  }
+
+  .item-count {
     color: $primary;
   }
 
