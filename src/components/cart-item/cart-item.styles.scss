@@ -1,0 +1,34 @@
+$bg-dark-mode: rgb(24, 22, 22);
+$primary: rgb(236, 230, 230);
+
+h2 {
+  color: $bg-dark-mode;
+}
+
+span {
+  color: $bg-dark-mode;
+}
+
+.cart-item-container {
+  width: 100%;
+  display: flex;
+  height: 80px;
+  margin-bottom: 15px;
+
+  img {
+    width: 30%;
+  }
+
+  .item-details {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 20px;
+
+    .name {
+      font-size: 16px;
+    }
+  }
+}

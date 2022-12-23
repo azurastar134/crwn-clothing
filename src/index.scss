@@ -78,6 +78,11 @@ body.dark-mode {
     background-color: $bg-dark-mode;
   }
 
+  .cart-dropdown-container {
+    border: 1px solid $primary;
+    background-color: $bg-dark-mode;
+  }
+
   .button-container {
     background-color: $primary;
     color: $bg-dark-mode;

@@ -13,13 +13,32 @@ import { CartContext } from "../../context/cart.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 const Navigation = () => {
+  /* {const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 20) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+} */
   const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
   console.log(currentUser);
 
   return (
     <Fragment>
-      <div className="navigation">
+      <div className={"navigation"}>
         <Link className="logo-container" to="/">
           <CrwnLogo className="logo" to="/" />
         </Link>
