@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { CartContext } from "../../context/cart.context";
 
@@ -9,6 +10,10 @@ import { Minimize } from "@mui/icons-material";
 
 const CartDropDown = () => {
   const { isCartOpen, setIsCartOpen, cartItems } = useContext(CartContext);
+  const navigate = useNavigate();
+  const goToCheckoutHandler = () => {
+    navigate("/checkout");
+  };
 
   const [scrolled, setScrolled] = useState(false);
   const toggleMinimizeIcon = () => setIsCartOpen(!isCartOpen);
@@ -43,7 +48,7 @@ const CartDropDown = () => {
           <CartItem key={item.id} cartItem={item} />
         ))}
       </div>
-      <Button>GO TO CHECKOUT</Button>
+      <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
     </div>
   );
 };
